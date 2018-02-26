@@ -10,12 +10,17 @@
 local areaText
 local textSize = 50
 local myRectangle
-local widthOfRectangle = 350
-local heightOfRectangle = 200
+local widthOfRectangle = 150
+local heightOfRectangle = 100
 local areaOfRectangle
+local areaTextC
+local myCircle
+local radiusOfCircle = 200
+local PI = 3.14
+local areaOfCircle
 
 --set the backgroud colour of my screen. Rememeber that colors are between 0 and 1.
-display.setDefault("background", 28/255, 121/255, 243/255)
+display.setDefault("background", 143/255, 240/255, 255/255)
 
 --to remove status bar
 display.setStatusBar(display.HiddenStatusBar)
@@ -30,13 +35,13 @@ myRectangle.x = 20
 myRectangle.y = 20
 
 --set the width of the border
-myRectangle.strokeWidth = 20
+myRectangle.strokeWidth = 10
 
 --set the colour of the rectangle
-myRectangle:setFillColor(0.7, 0.1, 0.3)
+myRectangle:setFillColor(1, 0.1, 0.4)
 
 --set the colour of the border
-myRectangle:setStrokeColor(0, 1, 0)
+myRectangle:setStrokeColor(0.4, 1, 0.4)
 
 --calculate the area
 areaOfRectangle = widthOfRectangle * heightOfRectangle
@@ -53,4 +58,26 @@ areaText.x = 20
 areaText.y = display.contentHeight/2
 
 --set the colour of the newText
-areaText:setTextColor(1, 1, 1)
+areaText:setTextColor(0, 0, 0)
+
+--draw the circle 
+myCircle = display.newCircle(400, 100, 30)
+
+--set the colour of the circle
+myCircle:setFillColor(1, 0.1, 0.4)
+
+--set the width of the border
+myCircle.strokeWidth = 10
+
+--set the colour of the border
+myCircle:setStrokeColor(0.4, 1, 0.4)
+
+--calculate the area
+areaOfCircle = PI * radiusOfCircle^2
+
+--write the area on the screen. Take into consideration the size of the font when positioning it on the screen
+areaTextC = display.newText("The area of this circle with a radius of \n" ..
+	radiusOfCircle .. " is " .. areaOfCircle .. " pixels^2. ",210, 250, Arial, 24)
+
+--set the colour of the newText
+areaTextC:setTextColor(0, 0, 0)

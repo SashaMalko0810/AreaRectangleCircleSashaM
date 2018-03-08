@@ -38,10 +38,10 @@ myRectangle.y = 20
 myRectangle.strokeWidth = 10
 
 --set the colour of the rectangle
-myRectangle:setFillColor(1, 0.1, 0.4)
+myRectangle:setFillColor(0.1, 0.7, 0.3)
 
 --set the colour of the border
-myRectangle:setStrokeColor(0.4, 1, 0.4)
+myRectangle:setStrokeColor(0.6, 0.02, 0.2)
 
 --calculate the area
 areaOfRectangle = widthOfRectangle * heightOfRectangle
@@ -80,4 +80,4 @@ areaTextC = display.newText("The area of this circle with a radius of \n" ..
 	radiusOfCircle .. " is " .. areaOfCircle .. " pixels^2. ",210, 250, Arial, 24)
 
 --set the colour of the newText
-areaTextC:setTextColor(0, 0, 0)
+areaTextC:setTextColor(0.08, 0.4, 0.7)

@@ -25,6 +25,7 @@ local energyChannel
 
 --play the backgournd music
 energyChannel = audio.play(energy)
+
 --set the backgroud colour of my screen. Rememeber that colors are between 0 and 1.
 display.setDefault("background", 143/255, 240/255, 255/255)
 

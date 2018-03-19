@@ -19,6 +19,12 @@ local radiusOfCircle = 200
 local PI = 3.14
 local areaOfCircle
 
+--create local varaibles for sound
+local energy = audio.loadSound("Sounds/energy.mp3")
+local energyChannel 
+
+--play the backgournd music
+energyChannel = audio.play(energy)
 --set the backgroud colour of my screen. Rememeber that colors are between 0 and 1.
 display.setDefault("background", 143/255, 240/255, 255/255)
 
